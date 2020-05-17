@@ -3,7 +3,7 @@
 <xsl:output method="text"/>
 
 <xsl:template match="/qstat">
-     <xsl:apply-templates select="server" match="server[@status!='UP'] and server[@type='WARFORKS']">
+     <xsl:apply-templates select="server">
         <xsl:sort select="ping" data-type="number" order="ascending"/>
     </xsl:apply-templates>
 </xsl:template>
