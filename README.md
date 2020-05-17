@@ -10,7 +10,8 @@ depends on qstat and libxslt
 1) install qstat and libxslt .Chances are you altready have libxslt.
 
 2) add this to /etc/qstat.cfg:
-[code]
+
+<pre>
 gametype WARFORKS new extend Q2S
     name = Warfork
     default port = 44400
@@ -29,12 +30,14 @@ gametype WARFORKM new extend Q3M
     master query = empty full
     master for gametype = WARFORKS
 end
-[/code]
+</pre>
 
 3) save quakestat_warfork.sh and quakstat.xsl where you want to run it from
 
 4) edit quakestat_warfork.sh and change this part so it matches the absolute path of quakestat.xsl:
 
+<pre>
     ~/<path...to>/quakestat.xsl 
-    
+</pre>
+
 5) run quakestat_warfork.sh 
