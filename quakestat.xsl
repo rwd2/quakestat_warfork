@@ -22,7 +22,7 @@
 
 <xsl:template match="player"><xsl:choose><xsl:when test="ping != '0'">
   \e[0;34m <xsl:choose><xsl:when test="score = '-9999'">-</xsl:when><xsl:otherwise><xsl:value-of select="score"/></xsl:otherwise></xsl:choose>\e[1;34m \e[;34m <xsl:value-of select="name"/>\e[1;34m ping:\e[0;34m <xsl:value-of select="ping"/>\e[1;34m team:\e[0;34m <xsl:value-of select="team"/>
-</xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose>
+</xsl:when></xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>
