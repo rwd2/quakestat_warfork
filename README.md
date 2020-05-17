@@ -1,15 +1,15 @@
-# quakestat_warfork
+# Description
 Little script that displays server and playerinfo for the game Warfork.
 
 It currently has zero options. So if you want to change the sorting and filtering you need to edit quakestat.xsl. Right now it shows only servers that have at least one player with a non-zero ping. 'tv' servers are not shown. 
 
-depends on qstat and libxslt 
+Dependencies are qstat (or quakestat) and libxslt 
 
 # To make it work:
 
-1) install qstat and libxslt .Chances are you altready have libxslt.
+1) Install qstat and libxslt. Chances are you altready have libxslt.
 
-2) add this to /etc/qstat.cfg:
+2) Add this to /etc/qstat.cfg:
 
 <pre>
 gametype WARFORKS new extend Q2S
@@ -32,12 +32,12 @@ gametype WARFORKM new extend Q3M
 end
 </pre>
 
-3) save quakestat_warfork.sh and quakstat.xsl where you want to run it from
+3) Save quakestat_warfork.sh and quakstat.xsl where you want to run it from.
 
-4) edit quakestat_warfork.sh and change this part so it matches the absolute path of quakestat.xsl:
+4) Edit quakestat_warfork.sh and change this part so it matches the absolute path of quakestat.xsl:
 
   <pre>
     ~/&lt;path...to&gt;/quakestat.xsl 
  </pre>
 
-5) run quakestat_warfork.sh 
+5) Run quakestat_warfork.sh 
