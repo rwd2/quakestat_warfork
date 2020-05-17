@@ -1,10 +1,10 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
-<xsl:output method="xml" indent="yes" omit-xml-declaration="yes" />
+<xsl:output method="text"/>
 
 <xsl:template match="/qstat">
-    <xsl:apply-templates select="server" match="server[@status!='UP']"> <!-- and @type='WARFORKS']">-->
-        <xsl:sort select="ping" data-type="number"  order="ascending"/>
+     <xsl:apply-templates select="server" match="server[@status!='UP'] and server[@type='WARFORKS']">
+        <xsl:sort select="ping" data-type="number" order="ascending"/>
     </xsl:apply-templates>
 </xsl:template>
 
