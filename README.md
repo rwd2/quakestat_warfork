@@ -36,8 +36,8 @@ end
 
 4) edit quakestat_warfork.sh and change this part so it matches the absolute path of quakestat.xsl:
 
-<pre>
-    ~/<path...to>/quakestat.xsl 
-</pre>
+  <pre>
+    ~/&lt;path...to&gt;/quakestat.xsl 
+ </pre>
 
 5) run quakestat_warfork.sh 
