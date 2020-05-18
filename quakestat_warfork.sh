@@ -21,8 +21,18 @@
 #    master query = empty full
 #    master for gametype = WARFORKS
 #end
-echo "connecting to server..."
-qstat  -R -P -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > /tmp/qstat_warfork.xml
+function main() {
+    clear
+    echo -e "\e[0;0mconnecting to server..."
+    qstat  -P -R -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > /tmp/qstat_warfork.xml
+    clear
+    xsltproc ~/<path..to>/quakestat.xsl /tmp/qstat_warfork.xml  | xargs -0  echo -e
+    rm /tmp/qstat_warfork.xml
+    echo -e  "\e[0;35m"
+}
+main
+while read -n1 -r -p ":: [r]eload [q]uit" && [[ $REPLY != q ]]; do
+  main
+done
 clear
-xsltproc ~/<path...to>/quakestat.xsl /tmp/qstat_warfork.xml  | xargs -0  echo -e
-rm /tmp/qstat_warfork.xml
+
