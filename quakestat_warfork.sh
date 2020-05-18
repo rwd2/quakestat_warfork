@@ -22,7 +22,7 @@
 #    master for gametype = WARFORKS
 #end
 echo "connecting to server..."
-qstat  -P -ne -u -xml -utf8 -R -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > /tmp/qstat_warfork.xml
+qstat  -R -P -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > /tmp/qstat_warfork.xml
 clear
 xsltproc ~/<path...to>/quakestat.xsl /tmp/qstat_warfork.xml  | xargs -0  echo -e
 rm /tmp/qstat_warfork.xml
