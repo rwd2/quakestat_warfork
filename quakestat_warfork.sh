@@ -21,7 +21,7 @@
 #    master query = empty full
 #    master for gametype = WARFORKS
 #end
-function main() {
+main() {
     clear
     echo -e "\e[0;0mconnecting to server..."
     qstat  -P -R -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > /tmp/qstat_warfork.xml
@@ -31,8 +31,8 @@ function main() {
     echo -e  "\e[0;35m"
 }
 main
-while read -n1 -r -p ":: [r]eload [q]uit" && [[ $REPLY != q ]]; do
-  main
+while read -n1 -r -p " -> [q]uit, or any other key to reload" && [[ $REPLY != q ]]; do
+    main
 done
 clear
 
