@@ -1,7 +1,9 @@
 # Description
 Commandline shell script that displays server and playerinfo for the game Warfork. It is meant for Linux but should work on any system that supports 'sh' shell scripts.
 
-It currently has zero options. So if you want to change the sorting and filtering you need to edit quakestat.xsl. Right now it shows only servers that have at least one player with a non-zero ping. 'tv' servers are not shown. 
+Right now it is configured to show only human players. Servers with no human players, and 'tv' servers are filtered out. 
+
+The script has zero options. So if you want to change the sorting and filtering you need to edit quakestat.xsl. 
 
 Dependencies are qstat (or quakestat) and libxslt 
 
