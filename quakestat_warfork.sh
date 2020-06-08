@@ -21,12 +21,16 @@
 #    master query = empty full
 #    master for gametype = WARFORKS
 #end
+
+SCRIPT=$(readlink -f "$0")
+SCRIPT_DIRECTORY=$(readlink -f $(dirname $SCRIPT))
+
 main() {
     clear
     echo -e "\e[0;0mconnecting to server..."
     qstat  -P -R -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > /tmp/qstat_warfork.xml
     clear
-    xsltproc ~/<path..to>/quakestat.xsl /tmp/qstat_warfork.xml  | xargs -0  echo -e
+    xsltproc "$SCRIPT_DIRECTORY/quakestat.xsl" /tmp/qstat_warfork.xml  | xargs -0  echo -e
     rm /tmp/qstat_warfork.xml
     echo -e  "\e[0;35m"
 }
@@ -35,4 +39,3 @@ while read -n1 -r -p " -> [q]uit, or any other key to reload" && [[ $REPLY != q 
     main
 done
 clear
-
