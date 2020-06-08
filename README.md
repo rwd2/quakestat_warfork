@@ -36,10 +36,4 @@ end
 
 3) Save quakestat_warfork.sh and quakstat.xsl where you want to run it from.
 
-4) Edit quakestat_warfork.sh and change this part so it matches the absolute path of quakestat.xsl:
-
-  <pre>
-    ~/&lt;path...to&gt;/quakestat.xsl 
- </pre>
-
-5) Run quakestat_warfork.sh 
+4) Run quakestat_warfork.sh 
