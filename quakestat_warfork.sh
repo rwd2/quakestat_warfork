@@ -35,7 +35,8 @@ main() {
     echo -e  "\e[0;35m"
 }
 main
-while read -n1 -r -p " -> [q]uit, or any other key to reload" && [[ $REPLY != q ]]; do
+while read -n1 -r -p " -> press space to reload, or any other key to quit" && [[ "$REPLY" = ' ' ]]; do
     main
 done
 clear
+
