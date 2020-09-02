@@ -40,3 +40,4 @@ while read -n1 -r -p " -> press space to reload, or any other key to quit" && [[
 done
 clear
 
+
