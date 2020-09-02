@@ -1,5 +1,5 @@
 #!/bin/sh
-# depends on qstat libxslt 
+# dependencies: qstat (alias quakestat) , libxslt 
 #
 # put in /etc/qstat.cfg:
 #
