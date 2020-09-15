@@ -33,6 +33,7 @@ main() {
     xsltproc "$SCRIPT_DIRECTORY/quakestat.xsl" /tmp/qstat_warfork.xml  | xargs -0  echo -e
     rm /tmp/qstat_warfork.xml
     echo -e  "\e[0;35m"
+    read -t 1 -n 1000 discard # discard keys typed during load
 }
 main
 while read -n1 -r -p " -> press space to reload, or any other key to quit" && [[ "$REPLY" = ' ' ]]; do
