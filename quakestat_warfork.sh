@@ -24,7 +24,6 @@
 
 SCRIPT=$(readlink -f "$0")
 SCRIPT_DIRECTORY=$(readlink -f $(dirname $SCRIPT))
-trap 'rm -f "$TMPFILE"' EXIT
 TMPFILE=$(mktemp) || exit 1
 
 main() {
