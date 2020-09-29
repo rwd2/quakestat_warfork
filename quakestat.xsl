@@ -10,7 +10,7 @@
 
 <xsl:template match="server">
 <xsl:choose><xsl:when test="players/player/ping != '0' and not(rules/rule[@name='tv'] = '1')">
- \e[0;35m<xsl:choose><xsl:when test="rules/rule[@name='g_needpass'] = '1'"># </xsl:when></xsl:choose><xsl:value-of select="name"/>\e[1;35m - ping <xsl:value-of select="ping"/> | gametype <xsl:choose><xsl:when test="rules/rule[@name='g_instagib'] = '1'">(i)</xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><xsl:value-of select="rules/rule[@name='gametype']"/> | map <xsl:value-of select="map"/> | players <xsl:value-of select="numplayers"/>/<xsl:value-of select="maxplayers"/> | matchtime <xsl:value-of select="rules/rule[@name='g_match_time']"/>\e[0m<xsl:apply-templates select="players"/>
+ \e[0;35m<xsl:choose><xsl:when test="rules/rule[@name='g_needpass'] = '1'">🔒</xsl:when></xsl:choose><xsl:value-of select="name"/>\e[1;35m - ping <xsl:value-of select="ping"/> | gametype <xsl:choose><xsl:when test="rules/rule[@name='g_instagib'] = '1'">(i)</xsl:when><xsl:otherwise></xsl:otherwise></xsl:choose><xsl:value-of select="rules/rule[@name='gametype']"/> | map <xsl:value-of select="map"/> | players <xsl:value-of select="numplayers"/>/<xsl:value-of select="maxplayers"/> | matchtime <xsl:value-of select="rules/rule[@name='g_match_time']"/>\e[0m<xsl:apply-templates select="players"/>
 </xsl:when></xsl:choose>
 </xsl:template>
 
