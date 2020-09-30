@@ -39,6 +39,6 @@ end
 
 # Known issues
 
-Because there is no reliable way to determine wether or not a player is a bot or a human, this is now done by filtering out players with 0 ping. Human players with 0 ping are therefore filtered out as well unfortunately. 
+Because there is no reliable way to determine if a player is a bot or a human, this is now done by filtering out players with 0 ping. Human players with 0 ping are therefore filtered out as well unfortunately. 
 
 
