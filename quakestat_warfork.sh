@@ -1,26 +1,4 @@
 #!/bin/sh
-# dependencies: qstat (alias quakestat) , libxslt 
-#
-# put in /etc/qstat.cfg:
-#
-#gametype WARFORKS new extend Q2S
-#    name = Warfork
-#    default port = 44400
-#    template var = WARFORK
-#    game rule = gamename
-#    status packet = \377\377\377\377getinfo
-#    status2 packet = \377\377\377\377getstatus
-#end
-#
-#gametype WARFORKM new extend Q3M
-#    name = Warfork Master
-#    template var = WARFORKMASTER
-#    default port = 27950
-#    master packet = \377\377\377\377getservers Warfork %s %s
-#    master protocol = 22
-#    master query = empty full
-#    master for gametype = WARFORKS
-#end
 
 SCRIPT=$(readlink -f "$0")
 SCRIPT_DIRECTORY=$(readlink -f $(dirname $SCRIPT))
