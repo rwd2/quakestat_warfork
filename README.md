@@ -10,32 +10,9 @@ The script has zero options. So if you want to change the sorting and filtering 
 
 1) Install qstat (or quakestat) and libxslt. Chances are you altready have libxslt.
 
-2) Add this to /etc/qstat.cfg:
+2) keep quakestat_warfork.sh, quakstat.xsl and quakstat.cfg together in the same directory
 
-<pre>
-gametype WARFORKS new extend Q2S
-    name = Warfork
-    default port = 44400
-    template var = WARFORK
-    game rule = gamename
-    status packet = \377\377\377\377getinfo
-    status2 packet = \377\377\377\377getstatus
-end
-
-gametype WARFORKM new extend Q3M
-    name = Warfork Master
-    template var = WARFORKMASTER
-    default port = 27950
-    master packet = \377\377\377\377getservers Warfork %s %s
-    master protocol = 22
-    master query = empty full
-    master for gametype = WARFORKS
-end
-</pre>
-
-3) Save quakestat_warfork.sh and quakstat.xsl where you want to run it from.
-
-4) Run quakestat_warfork.sh 
+3) Run quakestat_warfork.sh 
 
 # Known issues
 
