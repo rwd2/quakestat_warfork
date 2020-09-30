@@ -39,7 +39,7 @@ end
 
 4) Run quakestat_warfork.sh 
 
-#known issues
+# Known issues
 
 Because there is no reliable way to determine wether or not a player is a bot or a human, this is now done by filtering out players with 0 ping. Human players with 0 ping are therefore filtered out as well unfortunately. 
 
