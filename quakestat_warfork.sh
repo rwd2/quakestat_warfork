@@ -7,7 +7,7 @@ TMPFILE=$(mktemp) || exit 1
 main() {
     clear
     echo -e "\e[0;0mconnecting to server..."
-    qstat  -P -R -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > $TMPFILE
+    qstat -cfg "$SCRIPT_DIRECTORY/quakestat.cfg"  -P -R -ne -u -xml -utf8 -retry 1 -warforkm master1.forbidden.gg |  sed 's/\^[0-9]//g' > $TMPFILE
     clear
     xsltproc "$SCRIPT_DIRECTORY/quakestat.xsl" $TMPFILE  | xargs -0  echo -e
     rm $TMPFILE
