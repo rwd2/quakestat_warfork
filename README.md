@@ -6,11 +6,9 @@ Servers with no human players, and 'tv' servers are filtered out.
 
 The script has zero options. So if you want to change the sorting and filtering you need to edit quakestat.xsl. 
 
-Dependencies are qstat (or quakestat) and libxslt 
-
 # How to use:
 
-1) Install qstat and libxslt. Chances are you altready have libxslt.
+1) Install qstat (or quakestat) and libxslt. Chances are you altready have libxslt.
 
 2) Add this to /etc/qstat.cfg:
 
