@@ -1,13 +1,14 @@
 # Description
-Commandline shell script that displays server and playerinfo for the game Warfork. It is meant for Linux but should work on any system that supports 'sh' shell scripts.
 
-Right now it is configured to show only human players. Servers with no human players, and 'tv' servers are filtered out. 
+quakestat_warfork is a commandline shell script that displays server and playerinfo for the game Warfork. It is meant for Linux but should work on any system that supports 'sh' shell scripts.
+
+Servers with no human players, and 'tv' servers are filtered out. Because there is no reliable way to determine wether or not a player is a bot or a human, this is now done by filtering out players with 0 ping. Human players with 0 ping are therefore filtered out as well unfortunately. 
 
 The script has zero options. So if you want to change the sorting and filtering you need to edit quakestat.xsl. 
 
 Dependencies are qstat (or quakestat) and libxslt 
 
-# To make it work:
+# How to use:
 
 1) Install qstat and libxslt. Chances are you altready have libxslt.
 
